@@ -10,12 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526063043) do
+ActiveRecord::Schema.define(version: 20170526072116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  
+  create_table "addresses", force: :cascade do |t|
+    t.string   "house_no"
+    t.string   "street"
+    t.string   "city"
+    t.string   "district"
+    t.integer  "pin_no"
+    t.string   "mobile"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "first_names", force: :cascade do |t|
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "confirm_password"
+    t.string   "mobile"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.string   "size"
+    t.string   "brand"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "sub_categories", force: :cascade do |t|
+    t.string   "sub_category_name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
