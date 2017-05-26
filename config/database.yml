@@ -1,0 +1,24 @@
+development:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: giftcart
+
+production:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: giftcart
+
+
+test:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: giftcart
