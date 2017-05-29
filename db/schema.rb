@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20170526072116) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "first_names", force: :cascade do |t|
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "confirm_password"
+    t.string   "mobile"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
