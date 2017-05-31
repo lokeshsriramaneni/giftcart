@@ -1,0 +1,22 @@
+<%= form_tag controller: :users, action: :make_payment, product_price: params[:total_price], method: :post do%>
+  <table class="table">
+    <tr>
+      <td><%= label_tag :credit_card_number %></td>
+      <td><%= text_field_tag :credit_card_number %></td>
+    </tr>
+    <tr>
+      <td><%= label_tag :ccv%></td>
+      <td><%= text_field_tag :ccv%></td>
+    </tr>
+    <tr>
+      <td><%= label_tag :expires_at%></td>
+      <td><%= date_select :date,:expires_at,{ :discard_day => true},:discard_day=>true%></td>  
+    </tr>
+    <tr>
+      <td><%= submit_tag "Pay" %></td>
+      <td></td>
+    </tr>
+
+  </table>
+<%end%>
+<h3><%="Total Amount=#{params[:total_price]}"%></h3>
