@@ -17,8 +17,6 @@ class PaymentsController < ApplicationController
 			redirect_to products_path
 			flash[:notice]="Transaction failed"
 	end
-
-
-
+end
 	
 end
