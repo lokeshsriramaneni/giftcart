@@ -6,7 +6,7 @@ resources :categories
 resources :sub_categories
 resources :payments do 
   collection do
-    get "make_payments" 
+    get "make_payment" 
   end
 end
 
