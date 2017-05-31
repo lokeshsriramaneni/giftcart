@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526072116) do
+ActiveRecord::Schema.define(version: 20170529082245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,8 +61,9 @@ ActiveRecord::Schema.define(version: 20170526072116) do
     t.string   "password"
     t.string   "confirm_password"
     t.string   "mobile"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "braintree_customer_id"
   end
 
 end
