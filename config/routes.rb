@@ -6,9 +6,15 @@ resources :categories
 resources :sub_categories
 resources :payments do 
   collection do
+<<<<<<< HEAD
   	get "payment_form"
     post "make_payment"
     end
+=======
+    get "payment_form"
+    post "make_payment" 
+  end
+>>>>>>> 6c64c5f4fd3ed11c46260ca68887a8f27dd1f2e9
 end
 
 
